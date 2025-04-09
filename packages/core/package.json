@@ -20,7 +20,8 @@
   ],
   "scripts": {
     "prepublishOnly": "npm run build && npm run test",
-    "build": "yoctobundle",
+    "prebuild": "rimraf build",
+    "build": "esbuild src/index.ts --bundle --platform=neutral --outfile=build/index.js --format=cjs && esbuild src/index.ts --bundle --platform=neutral --outfile=build/index.mjs --format=esm && tsc --emitDeclarationOnly --outDir build",
     "test": "vitest run src/*",
     "test:watch": "vitest src/*",
     "deopt": "dexnode deopt.js",

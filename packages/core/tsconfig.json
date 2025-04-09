@@ -1,10 +1,28 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
+    "outDir": "./build",
+    "rootDir": "./src",
+    "composite": true,
+    "declaration": true,
     "declarationMap": true,
-    "paths": {
-      "test": ["./src/test.ts"]
-    },
+    "sourceMap": true,
+    "noImplicitAny": false
   },
-  "exclude": ["build"]
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.js",
+    "src/**/*.jsx",
+    "src/**/*.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "build",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.test.js",
+    "**/*.test.jsx",
+    "**/*.test-d.ts"
+  ]
 }

@@ -1,0 +1,49 @@
+{
+  "name": "@reatom/preact",
+  "version": "0.0.1",
+  "private": true,
+  "sideEffects": false,
+  "description": "Preact bindings for Reatom",
+  "type": "module",
+  "exports": {
+    "types": "./build/index.d.ts",
+    "require": "./build/index.js",
+    "default": "./build/index.mjs"
+  },
+  "main": "src/index.ts",
+  "module": "build/index.mjs",
+  "types": "build/index.d.ts",
+  "browserslist": [
+    "last 1 year"
+  ],
+  "scripts": {
+    "test": "vitest",
+    "demo": "vite",
+    "build": "vite build",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@reatom/core": "^3.1.0",
+    "preact": "^10.19.3"
+  },
+  "author": "artalar",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/artalar/reatom.git"
+  },
+  "bugs": {
+    "url": "https://github.com/artalar/reatom/issues"
+  },
+  "homepage": "https://www.reatom.dev/package/npm-react",
+  "files": [
+    "/build"
+  ],
+  "devDependencies": {
+    "@preact/preset-vite": "^2.10.1",
+    "@types/node": "^20.10.5",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.10",
+    "vitest": "^1.1.0"
+  }
+}

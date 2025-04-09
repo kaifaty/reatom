@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reatom Preact Todo Demo</title>
+    <style>
+      body {
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        max-width: 600px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+      }
+      .todo-list {
+        list-style: none;
+        padding: 0;
+      }
+      .todo-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem;
+        border-bottom: 1px solid #eee;
+      }
+      .todo-item.completed {
+        opacity: 0.6;
+      }
+      .todo-input {
+        display: flex;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+      }
+      .todo-input input {
+        flex: 1;
+        padding: 0.5rem;
+      }
+      button {
+        padding: 0.5rem 1rem;
+        background: #0070f3;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #0051cc;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/demo/main.tsx"></script>
+  </body>
+</html>

@@ -14,7 +14,7 @@
     "actualize-issue-templates": "npx tsx ./tools/actualize-issue-templates.ts"
   },
   "workspaces": [
-    "./packages/*"
+    "./packages/core"
   ],
   "packageManager": "npm@10.0.0",
   "engines": {
@@ -41,5 +41,9 @@
   "bugs": {
     "url": "https://github.com/artalar/reatom/issues"
   },
-  "homepage": "https://www.reatom.dev"
+  "homepage": "https://www.reatom.dev",
+  "devDependencies": {
+    "esbuild": "^0.25.2",
+    "rimraf": "^6.0.1"
+  }
 }
